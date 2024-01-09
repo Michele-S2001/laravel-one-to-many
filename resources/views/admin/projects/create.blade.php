@@ -20,6 +20,14 @@
                 <form action="{{route('admin.projects.store')}}" method="POST">
                     @csrf
                     <div class="mb-3">
+                        <label for="type_id" class="form-label">Type</label>
+                        <select name="type_id" class="form-control" id="type_id">
+                            @foreach($types as $type)
+                                <option @selected(old('type_id') == $type->id) value="{{$type->id}}">{{ $type->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
                         <input name="title" type="text" class="form-control" id="title" placeholder="Title of the project" value="{{old('title')}}">
                     </div>

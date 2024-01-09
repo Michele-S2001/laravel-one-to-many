@@ -24,7 +24,8 @@ class StoreProjectRequest extends FormRequest
         return [
             'title' => 'required|max:100|min:5',
             'image' => 'required|url:http,https',
-            'description' => 'required|min:10'
+            'description' => 'required|min:10',
+            'type_id' => 'required|exists:types,id'
         ];
     }
 }
