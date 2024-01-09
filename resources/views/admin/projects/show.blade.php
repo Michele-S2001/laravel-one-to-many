@@ -12,6 +12,7 @@
             </div>
             <div class="col-6">
                 <h3>{{$project->title}}</h3>
+                <span class="badge text-bg-info">{{$project->type->name}}</span>
                 <p>{{$project->description}}</p>
             </div>
         </div>
