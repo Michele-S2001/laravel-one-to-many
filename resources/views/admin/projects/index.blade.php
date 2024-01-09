@@ -16,6 +16,9 @@
                         <div class="project-card__header text-center pb-3">
                             <span class="badge text-dark">Web development</span>
                             <h3 class="title"> {{$project->title}} </h3>
+                            <span class="badge text-dark">
+                                {{$project->type->name}}
+                            </span>
                         </div>
                         <div class="project-card__body text-center">
                             <img class="mx-auto mb-3" src="{{$project->image}}" alt="project image">
