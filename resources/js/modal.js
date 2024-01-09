@@ -9,7 +9,6 @@ const cModalUndo = document.getElementById("undo");
 deleteInputs.forEach((input) => {
     input.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log("click");
 
         cModal.classList.add("show");
         cModalSubmit.addEventListener("click", () => {
